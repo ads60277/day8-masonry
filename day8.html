@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="day8.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="banner">
+        </div>
+        <div class="box">
+            <div class="grid">
+                <div class="grid-item">
+                    <img src="./ArsdCGv.jpeg" alt="">
+                </div>
+                <div class="grid-item">
+                    <img src="./kgTEVHZ.jpeg" alt="">
+                </div>
+                <div class="grid-item">
+                    <img src="./eUppgFB.jpeg" alt="">
+                </div>
+                <div class="grid-item">
+                    <img src="./LNUXzZF.jpeg" alt="">
+                </div>
+                <div class="grid-item">
+                    <img src="./s6w2RpD.jpeg" alt="">
+                </div>
+                <div class="grid-item">
+                    <img src="./OkKwWM9.jpeg" alt="">
+                </div>
+                <div class="grid-item">
+                    <img src="./SEu9pHo.jpeg" alt="">
+                </div>
+                <div class="grid-item">
+                    <img src="./vb0uajo.jpeg" alt="">
+                </div>
+                <div class="grid-item">
+                    <img src="./vZoqs0P.jpeg" alt="">
+                </div>
+                <div class="grid-item">
+                    <img src="./WAIXTXs.jpeg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js' integrity='sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g==' crossorigin='anonymous'></script>
+    <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
+    <script>
+
+        $('.grid').imagesLoaded().done().progress(function () {
+            $('.grid').masonry({
+                itemSelector: '.grid-item',
+                percentPosition: true,
+                columnWidth: '.grid-item'
+            });
+            setTimeout(() => {
+                $('.grid-item').addClass('active')
+            }, 300);
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,72 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.banner {
+    height: 200vh;
+    width: 300px;
+    background-color: #E8E8E8;
+    float: left;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    border-radius: 15px;
+}
+
+.box {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.grid {
+    margin-left: 300px;
+    /* padding-left: 200px;  */
+    padding-top: 100px;
+    perspective: 1000px;
+}
+
+.grid-item {
+    opacity: 0;
+    width: 25%;
+    margin: 5px;
+}
+
+.active {
+    transform: preserve-3d;
+    transform: scale(0.1);
+    animation: popUp 0.5s ease-in forwards;
+    
+}
+
+@mixin item($num) {
+    $waitTime: (-1+$num)*0.2;
+    animation-delay: #{$waitTime}s;
+}
+
+@for $i from 1 to 10 {
+    .grid-item:nth-child(#{$i}) {
+        @include item($i);
+    }
+}
+
+@keyframes popUp {
+    0% {}
+
+    70% {
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
+        opacity: .1;
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 1;
+    }
+}

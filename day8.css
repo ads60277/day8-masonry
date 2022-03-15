@@ -1,0 +1,127 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.banner {
+  height: 200vh;
+  width: 300px;
+  background-color: #E8E8E8;
+  float: left;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  border-radius: 15px;
+}
+
+.box {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.grid {
+  margin-left: 300px;
+  /* padding-left: 200px;  */
+  padding-top: 100px;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+}
+
+.grid-item {
+  opacity: 0;
+  width: 25%;
+  margin: 5px;
+}
+
+.active {
+  -webkit-transform: preserve-3d;
+          transform: preserve-3d;
+  -webkit-transform: scale(0.1);
+          transform: scale(0.1);
+  -webkit-animation: popUp 0.5s ease-in forwards;
+          animation: popUp 0.5s ease-in forwards;
+}
+
+.grid-item:nth-child(1) {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+
+.grid-item:nth-child(2) {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+.grid-item:nth-child(3) {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
+.grid-item:nth-child(4) {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+
+.grid-item:nth-child(5) {
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+}
+
+.grid-item:nth-child(6) {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.grid-item:nth-child(7) {
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
+}
+
+.grid-item:nth-child(8) {
+  -webkit-animation-delay: 1.4s;
+          animation-delay: 1.4s;
+}
+
+.grid-item:nth-child(9) {
+  -webkit-animation-delay: 1.6s;
+          animation-delay: 1.6s;
+}
+
+@-webkit-keyframes popUp {
+  0% {
+  }
+  70% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    opacity: .1;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes popUp {
+  0% {
+  }
+  70% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    opacity: .1;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+/*# sourceMappingURL=day8.css.map */
